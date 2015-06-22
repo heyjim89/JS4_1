@@ -1,3 +1,3 @@
 $( "#buttons" ).click(function() {
-  alert( "Handler for .click() called." );
+  console.log("Button has been clicked");
 });
