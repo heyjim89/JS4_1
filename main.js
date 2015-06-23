@@ -8,8 +8,39 @@ $(document).ready(function() {
 	  // console.log("Button has been clicked");
 	  $('body').append('<h1>Goodbye World</h1>');
 	});
-	$( '.buttons' ).click(function() {
+	$( '.ol' ).click(function() {
 	  // console.log("Button has been clicked");
-	  $('body').append('<h1>Goodbye World</h1>');
+	  $('body').append('<ol><li>Test1</li><li>Test2</li><li>Test3</li></ol>');
 	});
+
+
+	// PART TWO BEGIN
+	
+	$('p').mouseover(function() {
+
+        $(this).css({
+            'color' : 'pink',
+            'font-size' : '25px'
+        });
+    });
+
+    $('p').mouseout(function() {
+
+        $(this).css({
+            'color' : 'Black',
+            'font-size' : '12px'
+        });
+    });
+
+    $('h1').mouseover(function() {
+
+        $(this).append('!');
+    });
+
+    $('a').click(function() {
+
+            alert("Are you sure you want to go?")
+
+        });
+    
 });
