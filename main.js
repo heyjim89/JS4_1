@@ -20,7 +20,6 @@ $(document).ready(function() {
 
         $(this).css({
             'color' : 'pink',
-            'font-size' : '25px'
         });
     });
 
@@ -28,7 +27,6 @@ $(document).ready(function() {
 
         $(this).css({
             'color' : 'Black',
-            'font-size' : '12px'
         });
     });
 
@@ -39,14 +37,26 @@ $(document).ready(function() {
 
     $('a').click(function() {
 
-          if (confirm("Are you sure you want to go?")) {
-
-          }
-
-          else {
-          	$(this).remove();
-          	return false;
-          }
+      if (confirm("Are you sure you want to go?")) {
+      }
+      else {
+	  	$(this).remove();
+	  	return false;
+      }
     });
+
+    // PART THREE BEGIN
+    $('.giant').click(function() {
+
+        $('body').append("<div class='popup'>THIS IS JUST A TEST.</div>");
+        $('body').append("<center><button class='close'>CLOSE</button></center>");
+    });
+
+
+	$( "body" ).on( "click", ".close", function( event ) {
+	    event.preventDefault();
+    	$('.close').remove();
+    	$('.popup').remove();
+	});
 
 });
