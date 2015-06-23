@@ -1,15 +1,15 @@
 $(document).ready(function() {
 
 	$( '.add' ).click(function() {
-	  // console.log("Button has been clicked");
+	  console.log("Button has been clicked");
 	  $('body').append('<p>Hello World</p>');
 	});
 	$( '.h1' ).click(function() {
-	  // console.log("Button has been clicked");
+
 	  $('body').append('<h1>Goodbye World</h1>');
 	});
 	$( '.ol' ).click(function() {
-	  // console.log("Button has been clicked");
+
 	  $('body').append('<ol><li>Test1</li><li>Test2</li><li>Test3</li></ol>');
 	});
 
@@ -39,8 +39,14 @@ $(document).ready(function() {
 
     $('a').click(function() {
 
-            alert("Are you sure you want to go?")
+          if (confirm("Are you sure you want to go?")) {
 
-        });
-    
+          }
+
+          else {
+          	$(this).remove();
+          	return false;
+          }
+    });
+
 });
