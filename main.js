@@ -46,14 +46,19 @@ $(document).ready(function() {
     // PART THREE BEGIN
     $('.giant').click(function() {
 
-        $('body').append("<div class='popup'>THIS IS JUST A TEST.</div>");
-        $('body').append("<center><button class='close'>CLOSE</button></center>");
+
+        // $('body').append("<div class='popup'>THIS IS JUST A TEST.</div>");
+        // $('.popup').append("<center><button class='close'>CLOSE</button></center>");
+        var popup = $("<div class='popup'>THIS IS JUST A TEST.</div>");
+        popup.append("<center><button class='close'>CLOSE</button></center>");
+        $('body').append(popup);
+
+
     });
 
 
     $("body").on("click", ".close", function(event) {
         event.preventDefault();
-        $('.close').remove();
         $('.popup').remove();
     });
 
